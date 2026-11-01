@@ -1,0 +1,50 @@
+# =====================================================================
+#  UX-Ghost ZeroBaran — Real-time Spike Detector
+#  Author: Baran Avisat  <Baranavisat@gmail.com>
+#
+#  Runs every 30 minutes — free GitHub Actions tier.
+# =====================================================================
+name: UX-Ghost Realtime Detector
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # every 30 minutes
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: uxghost-realtime
+  cancel-in-progress: true
+
+jobs:
+  realtime-detect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: ⚡ Run realtime detector
+        env:
+          SUPABASE_URL:         ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+          UXG_RAGE_THRESHOLD:   ${{ vars.UXG_RAGE_THRESHOLD || '5' }}
+          UXG_RAGE_VISITOR_MIN: ${{ vars.UXG_RAGE_VISITOR_MIN || '3' }}
+          UXG_WINDOW_MIN:       ${{ vars.UXG_WINDOW_MIN || '30' }}
+        run: |
+          python scripts/run_realtime_detector.py

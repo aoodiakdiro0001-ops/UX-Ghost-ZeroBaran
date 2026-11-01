@@ -1,0 +1,20 @@
+# =====================================================================
+#  UX-Ghost ZeroBaran — Python dependencies
+#  Author: Baran Avisat
+# =====================================================================
+# --- core
+httpx>=0.26
+python-dotenv>=1.0
+# --- AI providers (Google Gemini + Groq free tiers)
+google-generativeai>=0.5
+groq>=0.11
+# --- data
+pandas>=2.0
+# --- dashboard
+streamlit>=1.32
+plotly>=5.18
+streamlit-autorefresh>=1.0.1
+# --- telegram
+# (uses httpx, no extra package needed)
+# --- dev
+ruff>=0.4

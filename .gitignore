@@ -1,0 +1,42 @@
+# =====================================================================
+#  UX-Ghost ZeroBaran — Git ignore
+# =====================================================================
+
+# --- secrets & env
+.env
+.env.*
+!.env.example
+*.local
+secrets.json
+
+# --- python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# --- streamlit
+.streamlit/secrets.toml
+
+# --- os / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- builds
+*.zip
+*.tar.gz
+dist/
+build/
+
+# --- node (tracker dev)
+node_modules/
+package-lock.json

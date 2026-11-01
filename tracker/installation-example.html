@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>UX-Ghost ZeroBaran — مثال تثبيت السكريبت</title>
+  <!-- ============ تثبيت سكريبت UX-Ghost ZeroBaran ============ -->
+  <script>
+    // ضع هنا بيانات Supabase الخاصة بمشروعك (Free Tier)
+    window.UXGHOST_URL = "https://YOUR-PROJECT.supabase.co";
+    window.UXGHOST_KEY = "YOUR-SUPABASE-ANON-KEY";
+    // فعّل السطر التالي لطباعة سجلات التصحيح في الـConsole
+    // window.UXGHOST_DEBUG = true;
+  </script>
+  <!-- يُفضّل تحميل السكريبت بـ defer بعد المحتوى -->
+  <script defer src="ux-ghost-tracker.js?v=1.0.0"></script>
+</head>
+<body>
+  <header>
+    <h1>متجر تجريبي — مثال تتبع سلوك الزائر</h1>
+    <nav>
+      <a href="#" class="ghost-btn">الرئيسية</a>
+      <a href="#" class="ghost-btn">المنتجات</a>
+      <a href="#" class="ghost-btn">من نحن</a>
+      <a href="#" class="ghost-btn primary">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>أحصل على المنتج الذي ينتظره عملاؤك</h2>
+      <button id="cta-buy">اشترِ الآن</button>
+      <!-- هذا الزر "يشبه" زر الشراء لكنه ليس كذلك — مثال على نقطة إحباط (Rage Click) -->
+      <div class="fake-button" style="margin-top:16px;padding:10px 18px;background:#eee;border-radius:6px;display:inline-block;">عرض التفاصيل</div>
+    </section>
+
+    <form id="lead-form">
+      <label>الاسم <input name="name" type="text"></label>
+      <label>البريد <input name="email" type="email"></label>
+      <label>الهاتف <input name="phone" type="tel"></label>
+      <button type="submit">إرسال</button>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+================================================================
+  UX-Ghost ZeroBaran  —  License & Attribution
+  Copyright © 2026  Baran Avisat
+================================================================
+
+Author      : Baran Avisat
+Email       : Baranavisat@gmail.com
+WhatsApp    : +90 531 326 3722
+IBAN (TR)   : TR10 0001 0090 1008 4013 0050 01
+Project URL : https://github.com/aoodiakdiro0001-ops/UX-Ghost-ZeroBaran
+
+----------------------- MIT License -----------------------
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--------------------------------------------------------------
+
+ADDITIONAL ATTRIBUTION CLAUSE (binding):
+  Any deployment, fork, or commercial redistribution of this software
+  MUST visibly display the author's name "Baran Avisat" and a working
+  link to the original project, in:
+    • the project's README or documentation
+    • any "About" page or settings panel of any UI built on top
+    • any derivative distribution's main entry-point documentation
+
+  Removing, hiding, or falsifying author attribution is a material
+  breach of this license and revokes your right to use the Software.
+
+--------------------------------------------------------------
+
+NO-WARRANTY NOTICE:
+  The author provides this software "as is" and assumes no liability
+  for any data loss, business impact, or third-party claims arising
+  from its use. Always test on staging environments before production.
+
+--------------------------------------------------------------
+
+If this project saved you money (it should — those analytics tools are
+expensive!), consider buying the author a coffee via the IBAN above.
