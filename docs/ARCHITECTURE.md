@@ -44,7 +44,7 @@ This document explains the technical architecture in depth.
 │  │   - Provider: Gemini or Groq (free tier)                    │  │
 │  └──────────────────────┬─────────────────────────────────────┘  │
 │  ┌──────────────────────▼─────────────────────────────────────┐  │
-│  │  telegram-bot/bot.py                                        │  │
+│  │  telegram_bot/bot.py                                        │  │
 │  │   - send_rage_alert(), send_funnel_alert(), daily_digest() │  │
 │  └──────────────────────┬─────────────────────────────────────┘  │
 └─────────────────────────┼────────────────────────────────────────┘

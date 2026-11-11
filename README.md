@@ -64,7 +64,7 @@
 3. **طبقة الأرشيف والبيانات** (`supabase/schema.sql`)
    تحفظ بيانات الأحداث والمسارات مرتبة لتقديم مخططات الخرائط الحرارية ومعدلات الهروب لكل صفحة. مع سياسات RLS صارمة تحترم الخصوصية (GDPR).
 
-4. **طبقة التوصيل والتنبيه الفوري** (`telegram-bot/`, `dashboard/app.py`)
+4. **طبقة التوصيل والتنبيه الفوري** (`telegram_bot/`, `dashboard/app.py`)
    ترسل لك تنبيهاً فورياً عند رصد مشكلة سلوكية مفاجئة في موقعك، مع إمكانية فتح لوحة Streamlit لمشاهدة الخرائط الحرارية مجاناً.
 
 ---
@@ -91,7 +91,7 @@ UX-Ghost-ZeroBaran/
 │   ├── app.py                       # لوحة Streamlit مع الخرائط الحرارية
 │   ├── requirements.txt
 │   └── .streamlit/config.toml
-├── telegram-bot/
+├── telegram_bot/
 │   ├── __init__.py
 │   ├── bot.py                       # بوت تليجرام التفاعلي + التنبيهات
 │   └── requirements.txt
@@ -166,7 +166,7 @@ streamlit run dashboard/app.py
 ### تشغيل بوت تليجرام (اختياري — تفاعلي)
 
 ```bash
-python telegram-bot/bot.py --mode poll
+python telegram_bot/bot.py --mode poll
 ```
 
 ### تفعيل الجداول المجدولة على GitHub

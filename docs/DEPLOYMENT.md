@@ -29,7 +29,7 @@ To switch providers, set `UXG_AI_PROVIDER=groq` (or `gemini`).
 2. Copy the bot token → `TELEGRAM_BOT_TOKEN`.
 3. Create a private channel, add the bot as admin.
 4. Get the channel id (forward a message to `@userinfobot`) → `TELEGRAM_CHAT_ID`.
-5. (Optional) Test: `python telegram-bot/bot.py --mode send-test`.
+5. (Optional) Test: `python telegram_bot/bot.py --mode send-test`.
 
 ## D) Tracker installation on your website
 
