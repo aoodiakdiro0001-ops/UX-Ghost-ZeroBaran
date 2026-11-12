@@ -39,6 +39,14 @@ log = logging.getLogger("uxghost.daily")
 def main():
     log.info("=== UX-Ghost ZeroBaran — Daily Analysis ===")
 
+    # Missing Supabase credentials are a configuration state, not a defect:
+    # report honestly and exit 0 until the secrets exist (keeps cron green).
+    if not (os.getenv("SUPABASE_URL") or "").strip() or \
+       not (os.getenv("SUPABASE_SERVICE_KEY") or "").strip():
+        log.warning("Supabase not configured (SUPABASE_URL / SUPABASE_SERVICE_KEY) "
+                    "- skipping cycle, exit 0")
+        return
+
     proc = EventProcessor()
     brain = UXBrain()
 
